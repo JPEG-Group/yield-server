@@ -1,9 +1,9 @@
 const sdk = require('@defillama/sdk');
 const utils = require('../utils');
 
-// JUSD is one fixed-rate USDC credit strategy issued through two vaults:
-// Accountable on Ethereum and Venzo on Arbitrum. The strategy rate is set on
-// chain in the Accountable loan's terms (loan().interestRate, in units of
+// JUSD deploys USDC into curated credit strategies, issued through two vaults:
+// Accountable on Ethereum and Venzo on Arbitrum. The current strategy rate is
+// set on chain in the Accountable loan's terms (loan().interestRate, in units of
 // BASIS_POINTS = 1e6). It is the topline rate before issuer platform fees and
 // applies to both vaults, since both run the same strategy.
 const RATE_SOURCE = {
